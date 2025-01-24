@@ -1,33 +1,33 @@
 # Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
 
-client_id = "570dd80ead4538bbe2262e8eaf693274"
-application_url = "https://shopify-vercel-app-chi.vercel.app/"
+client_id = "32b046779fd9105c3a137d42a6f7b9de"
+application_url = "https://shopify-test.valmonto.com/"
 embedded = true
-name = "example-app-v2"
-handle = "example-app-v2"
+name = "valmonto-test"
+handle = "valmonto-test"
 
 [webhooks]
 api_version = "2025-01"
 
-  [[webhooks.subscriptions]]
-  topics = [ "app/uninstalled" ]
-  uri = "/webhooks/app/uninstalled"
+[[webhooks.subscriptions]]
+topics = ["app/uninstalled"]
+uri = "/webhooks/app/uninstalled"
 
-  [[webhooks.subscriptions]]
-  topics = [ "app/scopes_update" ]
-  uri = "/webhooks/app/scopes_update"
+[[webhooks.subscriptions]]
+topics = ["app/scopes_update"]
+uri = "/webhooks/app/scopes_update"
 
 [access_scopes]
 # Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
 scopes = "write_products, read_orders, write_orders"
 
 [auth]
-redirect_urls = [ "https://shopify-vercel-app-chi.vercel.app/api/auth" ]
+redirect_urls = ["https://shopify-test.valmonto.com/api/auth"]
 
 [pos]
 embedded = false
 
 [build]
 include_config_on_deploy = true
-dev_store_url = "pruebas-aplicaciones-bm.myshopify.com"
+dev_store_url = "valmonto.myshopify.com"
 automatically_update_urls_on_dev = false
